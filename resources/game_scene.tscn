@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://iamvmyyt65th"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_te8qw"]
+[ext_resource type="SpriteFrames" uid="uid://bf2nkhpilc8vc" path="res://resources/player-spriteframe.tres" id="2_f3rwt"]
+[ext_resource type="SpriteFrames" uid="uid://cj2ghg3clc1oj" path="res://resources/herdable-spriteframe.tres" id="3_ax8ec"]
+[ext_resource type="Script" path="res://resources/herdable.gd" id="3_fmpy3"]
+[ext_resource type="Script" path="res://resources/level.gd" id="5_jpob2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_psvjt"]
+radius = 189.32
+
+[node name="game-scene" type="Node2D"]
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(123, 19)
+script = ExtResource("1_te8qw")
+speed = 200
+
+[node name="player-sprite" type="AnimatedSprite2D" parent="player"]
+position = Vector2(5.8, -6.2)
+sprite_frames = ExtResource("2_f3rwt")
+animation = &"player-sit-side"
+frame_progress = 0.244374
+
+[node name="player-collider" type="CollisionPolygon2D" parent="player"]
+position = Vector2(-131.2, -165.2)
+polygon = PackedVector2Array(71, 141, 73, 98, 206, 94, 196, 220, 70, 214)
+
+[node name="player-threat" type="CollisionShape2D" parent="player"]
+z_index = 1
+position = Vector2(4, -6)
+shape = SubResource("CircleShape2D_psvjt")
+disabled = true
+
+[node name="herdable" type="CharacterBody2D" parent="."]
+position = Vector2(523, -24)
+script = ExtResource("3_fmpy3")
+speed = 10
+
+[node name="herdable-sprite" type="AnimatedSprite2D" parent="herdable"]
+position = Vector2(0, 2)
+scale = Vector2(2.62653, 2.596)
+sprite_frames = ExtResource("3_ax8ec")
+
+[node name="herdable-collider" type="CollisionPolygon2D" parent="herdable"]
+position = Vector2(-131.2, -154.2)
+polygon = PackedVector2Array(71, 141, 73, 98, 206, 94, 196, 220, 70, 214)
+
+[node name="herdable-threat" type="CollisionShape2D" parent="herdable"]
+z_index = 1
+position = Vector2(11, -5)
+shape = SubResource("CircleShape2D_psvjt")
+disabled = true
+
+[node name="level" type="Node2D" parent="."]
+script = ExtResource("5_jpob2")

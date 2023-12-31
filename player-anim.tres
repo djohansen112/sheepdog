@@ -1,0 +1,27 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cjy46gjx3ew5n"]
+
+[ext_resource type="Texture2D" uid="uid://b8rolpbv6r65f" path="res://resources/dog-sprites.png" id="1_xynx8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7u67e"]
+resource_name = "walk-side"
+texture = ExtResource("1_xynx8")
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+7:6/0 = 0
+6:6/0 = 0
+5:6/0 = 0
+4:6/0 = 0
+3:6/0 = 0
+1:7/0 = 0
+0:7/0 = 0
+2:7/0 = 0
+
+[resource]
+tile_size = Vector2i(128, 128)
+sources/1 = SubResource("TileSetAtlasSource_7u67e")
