@@ -50,41 +50,20 @@ A bark mechanic might be able to add a stress level or points towards so the dog
 Needs a stress level – the longer the dog is within their threat radius, or the threat radius overlap, the higher the stress. If the sheep are stressed they will run directly awa from the threat. For higher levels, if the stress gets too high then at a threshold they can attack (rams, billygoats etc). For low enough stress the animal goes into grazing animation and stays pretty still.</l1>
 
 Behaviour table:
-| NPC type      | Zero stress   | Medium stress     | High stress   |
-|---------------|---------------|-------------------|---------------|
-| Sheep         | Grazing, walk | Walk, no stopping         | Run, no stopping      |  
-Special
-Sheep
-Grazing
-Run away
-Sprint away
+| NPC type      | Zero stress       | Medium stress     | High stress           | Special       |
+|---------------|-------------------|-------------------|-----------------------|---------------|
+| Sheep         | Grazing, walk     | Walk, no stopping | Run, no stopping      |  Nil          |
+| Rams          | Grazing, walking  | Run, no stopping  | Attack player         |               |
+| Goats         | Grazing, walking  | Run, can jump     | Play dead             | Jumping       |
+| Billygoats    | Walking           | Run, can jump     | Attack                | Jumping       |
+| Cats          | Walking, sleep    | Walk away         | Random sprint/jump    | Sprint/Jump   |
 
-Rams
-Grazing
-Run away
-Attack
-
-Goats
-Grazing/walking
-Run away
-Fall over play dead
-Can jump over the player at md-high stress
-Billygoats
-Walking
-Run away
-Attack
-Can jump over the player at mid-high stress?
-Cats
-Sleeping
-Walk away
-Random direction sprint
-Cat can jump or wander out of gate. Must be barked at to wake up. Thin middle section of behaviour before going to high level.
-
-
-
+Cat can jump or wander out of gate. Must be barked at to wake up goes back to sleep when stress back to zero. Thin middle section of behaviour before going to high level.
 
 Notes/Ideas:
-Maybe look at upgrading the player with scary collars, or possibly new dogs – start with a dachsund family dog and work up to kelpie? Not sure if the dogs should be just skins or should have a different stat block for each type.
+Maybe look at upgrading the player with scary collars, or possibly new dogs – start with a dachsund family dog and work up to kelpie? 
+Not sure if the dogs should be just skins or should have a different stat block for each type.
+New maps - maybe obstacles or bigger map/smaller gate?
 
 
 
