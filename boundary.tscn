@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dr1um7svlqiiq"]
+
+[node name="Boundary" type="Area2D"]

@@ -1,3 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
-Godot_v4.2.1-stable_linux.x86_64
+/android/
+./Godot_v4.3-stable_win64_console.exe
+./Godot_v4.3-stable_win64.exe

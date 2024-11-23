@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv4ibhh0rdl25"]
+
+[ext_resource type="Texture2D" uid="uid://bswmkpufxpw5o" path="res://icon.svg" id="1_nt3hh"]
+
+[sub_resource type="GDScript" id="GDScript_8r7qn"]
+script/source = "extends CharacterBody2D
+
+const SPEED = 300
+
+func _physics_process(delta):
+	var direction = Input.get_vector(\"UP\", \"DOWN\", \"LEFT\", \"RIGHT\")
+	velocity = direction * SPEED * delta
+	move_and_slide()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scdwr"]
+size = Vector2(128, 128)
+
+[node name="Player" type="CharacterBody2D"]
+script = SubResource("GDScript_8r7qn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nt3hh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_scdwr")
